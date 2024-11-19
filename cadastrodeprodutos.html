@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastros de Produtos</title>
+  <link rel="shortcut icon" href="./IMAGENS/Logo Icone.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./CADASTRO_DE_PRODUTOS/styles.css">
+</head>
+<body>
+  <header class="header">
+    <img src="./IMAGENS/Reciclar_Logo_Principal_Vertical_Negativo.png" alt="Logo Esquerda" class="logo logo-esquerda">
+    <h1>CADASTROS DE PRODUTOS</h1>
+    <a href="./home.html">
+      <img src="./IMAGENS/Layout.png" alt="Logo Direita" class="logo logo-direita">
+    </a>
+  </header>
+  <div class="container">
+    <form id="product-form">
+
+      <label for="sku">SKU:</label>
+      <input type="text" id="sku" name="sku" required>
+      
+      <label for="descricao">DESCRIÇÃO:</label>
+      <input type="text" id="descricao" name="descricao" required>
+      
+      <label for="tipo">TIPO:</label>
+      <select id="tipo" name="tipo" required>
+        <option value="Frutas">FRUTAS</option>
+        <option value="Legumes">LEGUMES</option>
+        <option value="Verduras">VERDURAS</option>
+        <option value="Bovina">BOVINA</option>
+        <option value="Ave">AVE</option>
+        <option value="Suína">SUÍNA</option>
+        <option value="Pescado">PESCADO</option>
+        <option value="Ovo">OVO</option>
+        <option value="Mercado">MERCADO</option>
+      </select>
+      
+      <label for="unidade">UNIDADE:</label>
+      <select id="unidade" name="unidade" required>
+        <option value="Un">UN</option>
+        <option value="kG">KG</option>
+      </select>
+      
+      <label for="grupo">GRUPO:</label>
+      <select id="grupo" name="grupo" required>
+        <option value="Mantimentos">MANTIMENTOS</option>
+        <option value="Hortaliças">HORTALIÇAS</option>
+        <option value="Proteínas">PROTEÍNAS</option>
+        <option value="Doações">DOAÇÕES</option>
+      </select>
+      
+      <label for="quantidade">QUANTIDADE:</label>
+      <input type="text" id="quantidade" name="quantidade">
+
+      <label for="valor_unitario">VALOR UNITÁRIO:</label>
+      <input type="text" id="valor_unitario" name="valor_unitario" required>
+
+      <label for="valor_total">VALOR TOTAL:</label>
+      <input type="text" id="valor_total" name="valor_total" readonly>
+
+      <label for="fornecedor">FORNECEDOR:</label>
+      <input type="text" id="fornecedor" name="fornecedor">
+
+      <label for="data_cadastro">Data Cadastro:</label>
+      <input type="date" id="data_cadastro" name="data_cadastro" required> 
+      
+      <label for="data_vencimento">Data Vencimento:</label>
+      <input type="date" id="data_vencimento" name="data_vencimento" required> 
+
+      <br><br>
+      
+      <div class="buttons">
+        <button type="submit">Salvar</button>
+        <button type="reset">Limpar</button>
+        <button type="button" onclick="goBack()">Voltar</button>
+      </div>
+    </form>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+  <script src="./CADASTRO_DE_PRODUTOS/app.js"></script>
+</body>
+</html>

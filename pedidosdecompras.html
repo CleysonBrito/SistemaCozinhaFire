@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./IMAGENS/Logo Icone.ico" type="image/x-icon">
+    <title>Pedido de Compras</title>
+    <link rel="stylesheet" href="./PEDIDOS DE COMPRAS/styles.css">
+</head>
+<body>
+    <header>
+        <img src="./IMAGENS/Reciclar_Logo_Principal_Vertical_Negativo.png" alt="Logo Esquerdo" id="logoEsquerdo">
+        <h1>PEDIDO DE COMPRAS</h1>
+        <button id="homeButton">
+            <img src="./IMAGENS/Layout.png" alt="Logo Direito">
+        </button>
+    </header>
+    <main>
+        <form id="pedidoForm">
+            <label for="numeroPedido">NUMERO DO PEDIDO:</label>
+            <input type="text" id="numeroPedido" name="numeroPedido">
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data">
+            <label for="fornecedor">Fornecedor:</label>
+            <input type="text" id="fornecedor" name="fornecedor">
+            <div class="item-entry">
+                <label for="sku">SKU:</label>
+                <input type="text" id="sku" name="sku">
+                <label for="descricao">DESCRIÇÃO:</label>
+                <input type="text" id="descricao" name="descricao">
+                <label for="quantidade">QUANTIDADE:</label>
+                <input type="number" id="quantidade" name="quantidade">
+                <label for="tipo">TIPO:</label>
+                <input type="text" id="tipo" name="tipo">
+                <label for="valorUnit">VALOR UNIT:</label>
+                <input type="number" id="valorUnit" name="valorUnit" step="0.01">
+                <button type="button" onclick="adicionarItem()">Adicionar Item</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Pedido</th>
+                        <th>SKU</th>
+                        <th>Descrição</th>
+                        <th>Quantidade</th>
+                        <th>Tipo</th>
+                        <th>Valor Unit</th>
+                        <th>Total</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="pedidoTableBody">
+                    <!-- Linhas da tabela serão adicionadas aqui -->
+                </tbody>
+            </table>
+            <div class="buttons">
+                <button type="button" onclick="exportarExcel()">EXPORTAR EM EXCEL</button>
+                <button type="button" onclick="exportarPDF()">EXPORTAR EM PDF</button>
+                <button type="button" onclick="salvar()">Salvar</button>
+                <button type="button" onclick="limpar()">Limpar</button>
+            </div>
+        </form>
+    </main>
+    <script src="./PEDIDOS DE COMPRAS/script.js"></script>
+</body>
+</html>

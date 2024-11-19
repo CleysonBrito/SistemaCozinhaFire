@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastros de Fornecedores</title>
+    <link rel="shortcut icon" href="./IMAGENS/Logo Icone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./CADASTRO_DE_FORNECEDORES/styles.css">
+</head>
+<body>
+    <header class="header">
+        <img src="./IMAGENS/Reciclar_Logo_Principal_Vertical_Negativo.png" alt="Logo Esquerda" class="logo logo-esquerda">
+        <h1>CADASTROS DE FORNECEDORES</h1>
+        <a href="./home.html">
+            <img src="./IMAGENS/Layout.png" alt="Logo Direita" class="logo logo-direita">
+        </a>
+    </header>
+    <div class="container">
+        <form id="supplier-form">
+            <label for="cnpj">CNPJ:</label>
+            <input type="text" id="cnpj" name="cnpj" required>
+            <label for="razao-social">RAZÃO SOCIAL:</label>
+            <input type="text" id="razao-social" name="razao-social" required>
+            <label for="endereco">ENDEREÇO:</label>
+            <input type="text" id="endereco" name="endereco" required>
+            <label for="numero">NÚMERO:</label>
+            <input type="text" id="numero" name="numero">
+            <label for="bairro">BAIRRO:</label>
+            <input type="text" id="bairro" name="bairro">
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep">
+            <label for="municipio">MUNICÍPIO:</label>
+            <input type="text" id="municipio" name="municipio">
+            <label for="uf">UF:</label>
+            <input type="text" id="uf" name="uf">
+            <label for="pais">PAÍS:</label>
+            <select id="pais" name="pais" required>
+                <option value="Brasil">Brasil</option>
+                <option value="Estados Unidos">Estados Unidos</option>
+                <option value="Canadá">Canadá</option>
+                <!-- Outras opções aqui -->
+            </select>
+            <label for="complemento">COMPLEMENTO:</label>
+            <input type="text" id="complemento" name="complemento">
+            <label for="telefone">TELEFONE:</label>
+            <input type="text" id="telefone" name="telefone">
+            <label for="email">E-MAIL:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            <div class="buttons">
+                <button type="submit">Salvar</button>
+                <button type="reset">Limpar</button>
+                <button type="button" onclick="goBack()">Voltar</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+    <script src="./CADASTRO_DE_FORNECEDORES/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pedidos</title>
+
+    
+    <link rel="shortcut icon" href="./IMAGENS/Logo Icone.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="./PEDIDOS/styles.css">
+</head>
+<body>
+    <header>
+        <img src="./IMAGENS/Reciclar_Logo_Principal_Vertical_Negativo.png" alt="Logo Esquerdo" class="logo">
+
+
+        <h1>LISTA DE PEDIDOS</h1>
+        <button class="home-button" onclick="goHome()">
+            <img src="./IMAGENS/Layout.png" alt="Home">
+        </button>
+    </header>
+    <main>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Pesquisar...">
+            <button onclick="searchItems()">Pesquisar</button>
+        </div>
+        <table id="itemsTable">
+            <thead>
+                <tr>
+                    <th>Status</th>
+                    <th>Data</th>
+                    <th>Pedido</th>
+                    <th>Fornecedor</th>
+                    <th>Total</th>
+                    <th>Selecionar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os itens cadastrados aparecerão aqui -->
+            </tbody>
+        </table>
+        <div class="buttons">
+            <button onclick="exportToExcel()">Exportar em Excel</button>
+            <button onclick="exportToPDF()">Exportar em PDF</button>
+            <button onclick="alterarPedido()">Alterar</button>
+        </div>
+    </main>
+    <script src="./PEDIDOS/script.js"></script>
+</body>
+</html>

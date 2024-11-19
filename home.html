@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./IMAGENS/Logo Icone.ico" type="image/x-icon">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./HOME/styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo" onclick="goHome()">
+            <img src="./IMAGENS/Reciclar_Logo_Principal_Vertical_Negativo.png" alt="Logo">
+        </div>
+        <div class="title">CONTROLE COZINHA</div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <button class="side-button" onclick="navigateTo('./entradadeprodutos.html')">ENTRADA</button>
+            <button class="side-button" onclick="navigateTo('./saída.html')">SAÍDAS</button>
+            <button class="side-button" onclick="navigateTo('./cadastros.html')">CADASTROS</button>
+            <button class="side-button" onclick="navigateTo('./estoque.html')">ESTOQUE</button>
+            <button class="side-button" onclick="navigateTo('./pedidosdecompras.html')">PEDIDO DE COMPRAS</button>
+            <button class="side-button" onclick="navigateTo('./pedidos.html')">PEDIDOS</button>
+            <button class="side-button" onclick="navigateTo('./refeiçõesservidas.html')">CADASTRO DE REFEIÇÕES SERVIDAS</button>
+            <button class="side-button" onclick="navigateTo('./relatórios.html')">RELATÓRIOS</button>
+        </div>
+        <div class="main-content">
+            <img src="./IMAGENS/PedidodeCompras.jpg" alt="Pedido de Compras" onclick="navigateTo('./pedidosdecompras.html')">
+            <img src="./IMAGENS/SaídadeProdutos.jpg" alt="Saída" onclick="navigateTo('./saída.html')">
+            <img src="./IMAGENS/RefeiçõesServidas.jpg" alt="Refeições Servidas" onclick="navigateTo('./refeiçõesservidas.html')">
+            <img src="./IMAGENS/Relatorios.jpg" alt="Relatórios" onclick="navigateTo('./relatórios.html')">
+        </div>
+    </div>
+    <script src="./HOME/script.js"></script>
+</body>
+</html>

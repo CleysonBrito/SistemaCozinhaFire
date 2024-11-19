@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Saídas</title>
+    <link rel="stylesheet" href="./RegistroSAÍDA/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+    <script src="./RegistroSAÍDA/script.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <img src="./IMAGENS/Reciclar_Logo_Principal_Vertical_Negativo.png" alt="Logo Esquerdo" class="logo" id="logo">
+        <h1>Consulta de Saídas</h1>
+        <button id="homeButton" onclick="irParaHome()">
+            <img src="./IMAGENS/Layout.png" alt="Home" id="homeIcon">
+        </button>
+    </div>
+    <div class="container">
+        <br>
+        <div class="filter-container">
+            <input type="text" id="sku" placeholder="Filtrar por SKU">
+            <input type="text" id="descricao" placeholder="Filtrar por descrição">
+            <input type="text" id="responsavel" placeholder="Filtrar por responsável">
+            <label for="data-inicio">Data Início:</label>
+            <input type="date" id="data-inicio">
+            <label for="data-fim">Data Fim:</label>
+            <input type="date" id="data-fim">
+            <button id="consultar-btn">Consultar</button>
+            <button id="limpar-btn">Limpar Filtros</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>SKU</th>
+                    <th>Quantidade</th>
+                    <th>Responsável</th>
+                    <th>Descrição</th>
+                    <th>Data</th>
+                    <th>Data de Cadastro</th>
+                    <th>Data de Vencimento</th>
+                    <th>Grupo</th>
+                    <th>Unidade</th>
+                    <th>Tipo</th>
+                    <th>Fornecedor</th>
+                </tr>
+            </thead>
+            <tbody id="resultados">
+                <!-- Resultados da consulta serão inseridos aqui -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

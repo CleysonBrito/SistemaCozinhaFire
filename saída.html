@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./IMAGENS/Logo Icone.ico" type="image/x-icon">
+    <title>Saída</title>
+    <link rel="stylesheet" href="./SAÍDA/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+    <script src="./SAÍDA/script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <img src="./IMAGENS/Reciclar_Logo_Principal_Vertical_Negativo.png" alt="Logo" id="logo">
+        <h1 id="titulo">SAÍDA</h1>
+        <div class="logo" onclick="goHome()">
+            <button id="homeButton">
+                <img src="./IMAGENS/Layout.png" alt="Home Icon" id="homeIcon">
+            </button>
+        </div>
+    </header>
+    <br>
+    <div class="filter-container">
+        <input type="text" id="sku" placeholder="SKU">
+        <input type="text" id="nome" placeholder="Nome">
+        <button id="consultar-btn">Consultar</button>
+        <button id="limpar-btn">Limpar Filtros</button>
+        <button id="registro-saida-btn">Registrar Saída</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>SKU</th>
+                <th>Descrição</th>
+                <th>Tipo</th>
+                <th>Unidade</th>
+                <th>Grupo</th>
+                <th>Quantidade</th>
+                <th>Fornecedor</th>
+                <th>Data de Cadastro</th>
+                <th>Data de Vencimento</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="resultados">
+            <!-- Resultados da consulta serão inseridos aqui -->
+        </tbody>
+    </table>
+
+    <!-- Modal para saída -->
+    <div id="saida-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Registrar Saída de Produto</h2>
+            <form id="saida-form">
+                <input type="hidden" id="saida-sku">
+                <p id="saida-descricao"></p>
+                <p id="saida-quantidade-atual"></p>
+                <p id="saida-detalhes"></p>
+                <label for="saida-quantidade">Quantidade:</label>
+                <input type="number" id="saida-quantidade" min="1" required>
+                <label for="saida-responsavel">Responsável pela Retirada:</label>
+                <select id="saida-responsavel" required>
+                    <option value="MARIA JOSÉ">MARIA JOSÉ</option>
+                    <option value="ROSILENE">ROSILENE</option>
+                    <option value="MISLENE">MISLENE</option>
+                </select>
+                <button type="submit">Registrar Saída</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
